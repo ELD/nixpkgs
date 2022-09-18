@@ -31390,6 +31390,8 @@ with pkgs;
 
   popcorntime = callPackage ../applications/video/popcorntime {};
 
+  pop-launcher = callPackage ../applications/misc/pop-launcher { };
+
   pothos = libsForQt5.callPackage ../applications/radio/pothos { };
 
   potrace = callPackage ../applications/graphics/potrace {};
