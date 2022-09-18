@@ -22,7 +22,7 @@ jobs:
         git config --global user.email "action@github.com"
         git config --global user.name "GH Action - Upstream Sync"
         git checkout nixos-unstable-bootspec-patched
-        git remote add upstream https://github.com/NixOS/nixpkgs.git
+        git remote add upstream https://github.com/NixOS/nixpkgs.git || true
         git fetch upstream nixos-unstable
         git rebase upstream/nixos-unstable
         git push --force-with-lease
@@ -40,7 +40,7 @@ jobs:
         git config --global user.email "action@github.com"
         git config --global user.name "GH Action - Upstream Sync"
         git checkout nixpkgs-unstable-bootspec-patched
-        git remote add upstream https://github.com/NixOS/nixpkgs.git
+        git remote add upstream https://github.com/NixOS/nixpkgs.git || true
         git fetch upstream nixpkgs-unstable
         git rebase upstream/nixpkgs-unstable
         git push --force-with-lease
